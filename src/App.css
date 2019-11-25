@@ -1,22 +1,20 @@
-.App {
+.app {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 1000px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.container {
+  background-color: #f5f6fa;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
+h1 {
+  font-size: 6.5em;
+  margin-top: 0;
 }
