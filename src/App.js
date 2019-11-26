@@ -29,7 +29,7 @@ const App = () => {
         <header></header>
         <main>
           <div>
-            <button onClick={fetchWord}>New Word</button>
+            <button className="ui brown massive button" onClick={fetchWord}>New Word</button>
             <h1>{word}</h1>
           </div>
         </main>
