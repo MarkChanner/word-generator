@@ -6,7 +6,7 @@
 }
 
 .container {
-  margin-top: 300px;
+  margin-top: 150px;
   background-color: #0fa;
   border-radius: 10px;
   padding-top: 10px;
@@ -16,7 +16,6 @@
 }
 
 h1 {
-  font-size: 13.5em;
+  font-size: 9.5em;
   margin-top: 30px;
 }
-
