@@ -5,7 +5,7 @@ import HTTP from './apis/http-common';
 const App = () => {
   const googleBaseUrl = 'https://google.com/search?q=';
   const [googleUrl, setGoogle] = useState(googleBaseUrl);
-  let [word, setWord] = useState('');
+  const [word, setWord] = useState('');
   const [usedWords, setUsedWords] = useState([]);
 
   const fetchWord = () => {
