@@ -3,8 +3,8 @@ import './App.css';
 import HTTP from './apis/http-common';
 
 const App = () => {
-  const wikiBaseUrl = 'https://en.wikipedia.org/wiki/';
-  const [wikiUrl, setWiki] = useState(wikiBaseUrl);
+  const googleBaseUrl = 'https://google.com/search?q=';
+  const [googleUrl, setGoogle] = useState(googleBaseUrl);
   const [word, setWord] = useState('');
   const [usedWords, setUsedWords] = useState([]);
 
@@ -25,10 +25,10 @@ const App = () => {
       });
   };
 
-  const setWikiUrl = () => {
+  const setGoogleUrl = () => {
     if (word) {
-      const underscoreWord = word.replace(/ /g, '_');
-      setWiki(`${wikiBaseUrl}${underscoreWord}`);
+      const underscoreWord = word.replace(/ /g, '+');
+      setGoogle(`${googleBaseUrl}${underscoreWord}`);
     }
   };
 
@@ -39,8 +39,8 @@ const App = () => {
         <main>
           <div>
             <button className="ui brown massive button" onClick={fetchWord}>New Word</button>
-            <h1 onClick={setWikiUrl}>
-              <a href={wikiUrl} rel="noopener noreferrer" target="_blank">
+            <h1 onClick={setGoogleUrl}>
+              <a href={googleUrl} rel="noopener noreferrer" target="_blank">
                 {word}
               </a>
             </h1>
