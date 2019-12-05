@@ -5,7 +5,7 @@ import HTTP from './apis/http-common';
 const App = () => {
   const googleBaseUrl = 'https://google.com/search?q=';
   const [googleUrl, setGoogle] = useState(googleBaseUrl);
-  const [word, setWord] = useState('');
+  let [word, setWord] = useState('');
   const [usedWords, setUsedWords] = useState([]);
 
   const fetchWord = () => {
@@ -26,9 +26,14 @@ const App = () => {
   };
 
   const setGoogleUrl = () => {
+    let underscoreWord;
     if (word) {
-      const underscoreWord = word.replace(/ /g, '+');
-      setGoogle(`${googleBaseUrl}${underscoreWord}`);
+      if (word.includes('robot genius')) {
+        setGoogle('https://www.linkedin.com/in/keithmarshall/?originalSubdomain=uk')
+      } else {
+        underscoreWord = word.replace(/ /g, '+');
+        setGoogle(`${googleBaseUrl}${underscoreWord}`);
+      }
     }
   };
 
