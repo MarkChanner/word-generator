@@ -26,12 +26,11 @@ const App = () => {
   };
 
   const setGoogleUrl = () => {
-    let underscoreWord;
     if (word) {
       if (word.includes('robot genius')) {
         setGoogle('https://www.linkedin.com/in/keithmarshall/?originalSubdomain=uk')
       } else {
-        underscoreWord = word.replace(/ /g, '+');
+        const underscoreWord = word.replace(/ /g, '+');
         setGoogle(`${googleBaseUrl}${underscoreWord}`);
       }
     }
