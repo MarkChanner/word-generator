@@ -3,6 +3,8 @@ import './App.css';
 import HTTP from './apis/http-common';
 
 const App = () => {
+  const wikiBaseUrl = 'https://en.wikipedia.org/wiki/';
+  const [wikiUrl, setWiki] = useState(wikiBaseUrl);
   const [word, setWord] = useState('');
   const [usedWords, setUsedWords] = useState([]);
 
@@ -23,6 +25,13 @@ const App = () => {
       });
   };
 
+  const setWikiUrl = () => {
+    if (word) {
+      const underscoreWord = word.replace(/ /g, '_');
+      setWiki(`${wikiBaseUrl}${underscoreWord}`);
+    }
+  };
+
   return (
     <div className="app">
       <div className="container">
@@ -30,7 +39,11 @@ const App = () => {
         <main>
           <div>
             <button className="ui brown massive button" onClick={fetchWord}>New Word</button>
-            <h1>{word}</h1>
+            <h1 onClick={setWikiUrl}>
+              <a href={wikiUrl} rel="noopener noreferrer" target="_blank">
+                {word}
+              </a>
+            </h1>
           </div>
         </main>
       </div>
